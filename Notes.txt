@@ -1,0 +1,2 @@
+* Understand top_p concept
+* Understand top_k concept
