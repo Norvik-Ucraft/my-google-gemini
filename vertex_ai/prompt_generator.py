@@ -13,6 +13,11 @@ os.getenv("GOOGLE_APPLICATION_CREDENTIALS")
 
 
 def generate_prompt(keywords: list) -> str:
+    """
+    Generate a prompt based on keywords.
+    :param keywords: list of keywords provided from user.
+    :return: Generated prompt based on keywords.
+    """
     vertexai.init(project=config.PROJECT_ID, location=config.LOCATION)
     multimodal_model = GenerativeModel("gemini-1.5-pro-preview-0409")
 
