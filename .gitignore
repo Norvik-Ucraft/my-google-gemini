@@ -163,4 +163,4 @@ cython_debug/
 *.json
 
 # images directory
-images/
+outputs/
