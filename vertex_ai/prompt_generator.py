@@ -19,18 +19,12 @@ Return the prompt without any extra text or description.
 """
 
 
-def generate_text() -> str:
+def generate_text(model_prompt: str) -> str:
     vertexai.init(project=config.PROJECT_ID, location=config.LOCATION)
     multimodal_model = GenerativeModel("gemini-1.5-pro-preview-0409")
 
+    # ToDo Configure the model if it's necessary
     # generation_config = GenerationConfig(temperature=1.)
 
-    response = multimodal_model.generate_content(
-        contents=[
-            "Generate a svg code that represents an coffee icon with a viewBox of 0 0 100 100 all within one path tag"
-        ]
-    )
+    response = multimodal_model.generate_content(contents=[model_prompt])
     return response.text
-
-
-print(generate_text())
