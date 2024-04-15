@@ -1,4 +1,4 @@
-IMAGEN_MODEL_PROMPT = "Design a minimalist icon of [keywords] in a line art style, transparent background."
+IMAGEN_MODEL_PROMPT = "Design a very simple minimalistic icon of [keywords] in a black fill in style, no gradient, transparent background."
 
 PROMPT_GENERATOR_PROMPT = """
 Generate one prompt for imagen model to represents pure icon or a symbol of based on the provided keywords from user
