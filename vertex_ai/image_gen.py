@@ -37,6 +37,11 @@ def generate_icon(keywords_list: list) -> Optional[str]:
 
 
 def make_white_background_transparent(image_path: str, tolerance: int = 20) -> None:
+    """
+    Make a white background a transparent image.
+    :param image_path: Generated image path.
+    :param tolerance: Tolerance for a white background.
+    """
     image = Image.open(image_path)
     image = image.convert("RGBA")
     bg_color = image.getpixel((0, 0))
