@@ -17,7 +17,7 @@ def generate_icon(keywords_list: list) -> Optional[str]:
     """
     Generate an icon from provided prompt.
     :param keywords_list: Keywords that we got from users.
-    :return: generated image unique id
+    :return: Generated image unique id
     """
     try:
         keywords = ", ".join(keywords_list)
