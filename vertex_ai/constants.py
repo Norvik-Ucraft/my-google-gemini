@@ -1,6 +1,6 @@
 IMAGEN_MODEL_PROMPT = "Design a very minimalistic icon of [keywords] in a black fill in style, no extra lines around the icon, no gradient, transparent background."
 
-TEMP_PROMPT = "A flat icon with black fill-in about [keywords], no gradient and with bright white color background."
+TEMP_PROMPT = "A clean, single flat icon, employing a black fill-in style, highlights [keywords], absent of gradients or shadows, against a flawless, bright white background."
 
 PROMPT_GENERATOR_PROMPT = """
 Generate one prompt for imagen model to represents pure icon or a symbol of based on the provided keywords from user
