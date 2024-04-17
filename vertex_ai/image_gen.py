@@ -20,12 +20,11 @@ def generate_icon(keywords_list: list) -> Optional[str]:
     """
     try:
         keywords = ", ".join(keywords_list)
-        prompt = constants.IMAGEN_MODEL_PROMPT.replace("[keywords]", keywords)
+        prompt = constants.TEMP_PROMPT.replace("[keywords]", keywords)
         icon_id = uuid.uuid4()
 
         response = generation_model.generate_images(
-            prompt=prompt,
-            safety_filter_level="block_most",
+            prompt=prompt, safety_filter_level="block_most", negative_prompt="low quality"
         )
 
         response.images[0].save(f"./outputs/photos/{icon_id}.png")
