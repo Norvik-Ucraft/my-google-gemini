@@ -25,7 +25,7 @@ def generate_icon(keywords_list: list) -> Optional[str]:
         icon_id = uuid.uuid4()
 
         response = generation_model.generate_images(
-            prompt=prompt, safety_filter_level="block_most", negative_prompt="low quality"
+            prompt=prompt, safety_filter_level="block_most", negative_prompt="low quality", aspect_ratio="4:3"
         )
         image_path = f"./outputs/transparent_bg/{icon_id}.png"
         response.images[0].save(image_path)
