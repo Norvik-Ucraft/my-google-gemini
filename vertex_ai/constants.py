@@ -10,3 +10,7 @@ which will be used later in a logo. \
 2. The icon should always be without any text and without any shadows. \
 Return the prompt without any extra text or description.
 """
+
+first_prompt = """
+Generate a creative minimalistic logo for my website that captures: [keywords]. With fill-in styling on a white background. The icon should be simple yet artistic, with unique design elements that make it stand out, using only black color without any text or additional content.
+"""
