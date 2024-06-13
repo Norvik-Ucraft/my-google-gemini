@@ -21,19 +21,20 @@ def generate_icon(keywords_list: list) -> Optional[str]:
     """
     try:
         keywords = ", ".join(keywords_list)
-        prompt = constants.TEMP_PROMPT.replace("[keywords]", keywords)
+        prompt = constants.first_prompt.replace("[keywords]", keywords)
         icon_id = uuid.uuid4()
 
         response = generation_model.generate_images(
-            prompt=prompt, safety_filter_level="block_most", negative_prompt="low quality", aspect_ratio="4:3"
+            prompt=prompt.strip(), safety_filter_level="block_most", negative_prompt="text"
         )
-        image_path = f"./outputs/transparent_bg/{icon_id}.png"
+        image_path = f"./outputs/{icon_id}.png"
         response.images[0].save(image_path)
 
         return image_path
     except Exception as e:
         message = f"Something went wrong with generating icons, message: {e}"
         logging.error(message, exc_info=True)
+        raise ValueError(message)
 
 
 def make_white_background_transparent(image_path: str, tolerance: int = 20) -> None:
