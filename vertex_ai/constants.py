@@ -1,3 +1,5 @@
+IMAGEN_3_MODEL = "imagen-3.0-generate-001"
+
 IMAGEN_MODEL_PROMPT = "Design a very minimalistic icon of [keywords] in a black fill in style, no extra lines around the icon, no gradient, transparent background."
 
 TEMP_PROMPT = "A clean, single flat icon, employing a black fill-in style, highlights [keywords], absent of gradients or shadows, against a flawless, bright white background."
