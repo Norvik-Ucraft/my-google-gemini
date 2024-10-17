@@ -1,18 +1,6 @@
-from vertex_ai import image_gen
+from vertex_ai import logo_generator
 
-prompt_keywords = ["tech", "betting", "money"]
-
-generated_icon = image_gen.generate_icon(keywords_list=prompt_keywords, name="Alexian")
-image_gen.make_white_background_transparent(image_path=generated_icon)
-print(generated_icon)
-
-tested = """
-["angus", "steak", "restaurant", "cozy"],
-["payment gateway", "online transaction"],
-["chinese food", "noodle", "soup"],
-["wine", "glass", "bottle", "waiter"],
-["italian", "pizza"],
-["football", "mascot"],
-["football", "mascot", "eagle"],
-["Spanish", "bachata", "concert hall"]
-"""
+for _ in range(6):
+    generated_image_bytes = logo_generator.generate_logo(["car", "mechanic", "engine"])
+    detected_text = logo_generator.extract_image_info(generated_image_bytes)
+    logo_generator.make_background_transparent(image_bytes=generated_image_bytes, background_color_threshold=50)
