@@ -164,5 +164,6 @@ cython_debug/
 
 # images directory
 generated_logos/
+generated_logos_without_background
 
 .DS_Store
